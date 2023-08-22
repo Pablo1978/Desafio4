@@ -90,8 +90,9 @@
 }
 
 .card-img {
-  width: 15rem;
+  width: 12rem;
   object-fit: contain;
+  border-radius: 5px;
 }
 
 .card-body {
