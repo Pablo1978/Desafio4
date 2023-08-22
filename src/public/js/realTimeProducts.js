@@ -1,6 +1,6 @@
 const socketClient = io();
 
-socketClient.on("envioDeProductos", (listProducts) => {
+socketClient.on("sendProducts", (listProducts) => {
   updateProductList(listProducts);
 });
 
@@ -38,14 +38,9 @@ form.addEventListener("submit", (evt) => {
   let price = form.elements.price.value;
   let code = form.elements.code.value;
 
-  socketClient.emit("addProduct", {
-    title,
-    description,
-    stock,
-    thumbnail,
-    price,
-    code,
-  });
+  let status = true; 
+  socketClient.emit("addProduct", 
+  {title, description, stock, thumbnail, price, code, status});
 
   form.reset();
 });

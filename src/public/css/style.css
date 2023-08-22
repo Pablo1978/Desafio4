@@ -65,9 +65,9 @@
 
 .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  width: 95%;
+  width: auto;
   margin: 20px;
   flex-direction: row;
   flex-wrap: wrap;
@@ -75,22 +75,23 @@
 }
 
 .card {
+  box-shadow: 5px 10px 15px rgb(22, 20, 20);
+  border-radius: 10px;
+  background-color: beige;
+  width: 15rem;
+  margin: 1rem;
+  padding: 20px;
   display: flex;
-  width: 200px;
-  height: 300px;
-  border-radius: 15px;
-  margin: 5px 15px;
-  box-shadow: 0 2px 12px 6px rgba(0, 0, 0, 0.2);
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  justify-items: center;
 }
 
 .card-img {
-  width: 150px;
-  padding: 0.5rem;
+  width: 15rem;
+  object-fit: contain;
 }
 
 .card-body {
@@ -102,7 +103,7 @@
 .card-info {
   width: 100%;
   padding: 5px;
-  text-align: left;
+  text-align: center;
 }
 
 .card-title {
