@@ -51,7 +51,7 @@ document.getElementById("delete-btn").addEventListener("click", (e) => {
   socketClient.emit("deleteProduct", deleteId);
   deleteIdInput.value = "";
   Swal.fire({
-    position: "top-end",
+    position: "center",
     icon: "success",
     title: "Producto eliminado",
     showConfirmButton: false,

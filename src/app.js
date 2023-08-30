@@ -18,7 +18,7 @@ app.engine("handlebars", handlebars.engine());
 app.set("view engine", "handlebars");
 app.set("views", `${__dirname}/views`);
 
-//rutas
+
 app.use("/api/products", productsRouter);
 app.use("/api/carts", cartsRouter);
 app.use("/", viewsRouter);
@@ -26,6 +26,7 @@ app.use("/", viewsRouter);
 const httpServer = app.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);
 });
+
 const pmanager = new ProductManager(__dirname + "/files/products.json");
 const socketServer = new Server(httpServer);
 
